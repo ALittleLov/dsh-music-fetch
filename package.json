@@ -1,0 +1,48 @@
+{
+  "name": "dsh-music-fetch",
+  "version": "0.1.0",
+  "description": "Fetch audio from a music share link for local analysis. Personal use only.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "dsh-plugin.json",
+    "cordis.patch.yml",
+    "使用须知与合规说明.md"
+  ],
+  "dependencies": {
+    "@neteasecloudmusicapienhanced/api": "4.41.1",
+    "@yakult-green-tea/qq-music-api": "3.3.5",
+    "music-metadata": "^11.16.1"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "setup:kugou": "node scripts/setup.mjs --with-kugou"
+  },
+  "os": [
+    "win32"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  }
+}

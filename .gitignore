@@ -1,0 +1,18 @@
+# 依赖与第三方副本（本地安装，不进仓库）
+node_modules/
+vendor/
+
+# 测试/探针脚本（含本机绝对路径，不发布）
+_probe/
+
+# 运行期产物与凭据
+*.log
+.env
+cookie.txt
+kugou-cookie.txt
+qq-cookie.txt
+audio/
+
+# 系统杂项
+.DS_Store
+Thumbs.db

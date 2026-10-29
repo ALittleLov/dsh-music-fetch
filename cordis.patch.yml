@@ -1,0 +1,13 @@
+# dsh-music-fetch 的 bundle patch —— 把取流插件挂进 DSH 配置树
+#
+# insert: 往配置树里加一行 entry
+# id:     这一行的唯一标识
+# name:   'dsh-music-fetch' 解析到本包入口 lib/index.js（宿主半侧）
+#
+# 数据目录默认是 ~/.dsh-music-fetch，可在 profile 的 cordis.yml 里覆盖：
+#   config:
+#     dataDir: '<你的数据目录>'
+
+- insert:
+    - id: music-fetch
+      name: 'dsh-music-fetch'
