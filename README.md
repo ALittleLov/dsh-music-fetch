@@ -1,6 +1,6 @@
 # dsh-music-fetch
 
-把一条音乐单曲分享链接变成一台本机上的音频文件，交给 `dsh-soundcheck`（本机的音频分析插件）分析。
+把一条音乐单曲分享链接变成一台本机上的音频文件，交给 [`dsh-soundcheck`](https://github.com/ALittleLov/dsh-soundcheck) 分析。
 
 它只做取流这一层：解析链接 → 调第三方接口拿音频地址 → 下载到本地缓存 → 把路径交出去。
 
